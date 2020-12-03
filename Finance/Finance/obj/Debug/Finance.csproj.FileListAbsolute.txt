@@ -84,3 +84,7 @@ C:\Users\ACER\Desktop\My Project\Finance\Finance\obj\Debug\Finance.csproj.CoreCo
 C:\Users\ACER\Desktop\My Project\Finance\Finance\obj\Debug\Finance.csproj.CopyComplete
 C:\Users\ACER\Desktop\My Project\Finance\Finance\obj\Debug\Finance.dll
 C:\Users\ACER\Desktop\My Project\Finance\Finance\obj\Debug\Finance.pdb
+C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.SqlServer.xml
