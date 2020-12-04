@@ -23,7 +23,6 @@ namespace Finance.Models
         public Nullable<double> EmiPerMonth { get; set; }
         public Nullable<double> EmiPaid { get; set; }
         public Nullable<double> EmiLeft { get; set; }
-    
         public virtual CardDetail CardDetail { get; set; }
         public virtual Product Product { get; set; }
         public virtual User User { get; set; }

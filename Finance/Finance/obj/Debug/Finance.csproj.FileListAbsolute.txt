@@ -88,3 +88,4 @@ C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.dll
 C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.SqlServer.dll
 C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.xml
 C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\My Project\Finance\Finance\bin\Controllers\productsController.cs

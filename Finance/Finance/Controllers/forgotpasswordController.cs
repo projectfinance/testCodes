@@ -24,8 +24,8 @@ namespace Finance.Controllers
             {
                 int otpValue = new Random().Next(100000, 999999);
                 otp = otpValue;
-                var accountSid = "AC61e058d33da3516c9a3e62538516a21c";
-                var authToken = "02d513f31c99240e8043e894fb794cce";
+                /*var accountSid = "AC61e058d33da3516c9a3e62538516a21c";
+                var authToken = "af827f42f8112da6d07d97c53d6f0602";
                 TwilioClient.Init(accountSid, authToken);
 
                 var to = new PhoneNumber("+91" + ph.phone);
@@ -34,6 +34,7 @@ namespace Finance.Controllers
                     to: to,
                     from: from,
                     body: "Finance Management System \n Your OTP for Password Reset is " + otpValue + ".");
+                */
             }
 
             catch
@@ -43,17 +44,8 @@ namespace Finance.Controllers
 
         }
 
-        /*
         [Route("getotpsession")]
-        public HttpResponseMessage GetOtpSession()
-        {
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, otp.ToString());
-            return response;
-        }*/
-
-        
-        [Route("getotpsession")]
-        public IHttpActionResult GetCountryById()
+        public IHttpActionResult GetOTPSession()
         {
             OTPClass otp_curr = new OTPClass();
             otp_curr.current_otp = otp.ToString();

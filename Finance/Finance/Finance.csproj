@@ -150,7 +150,10 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\forgotpasswordController.cs" />
-    <Compile Include="Controllers\productsController.cs" />
+    <Compile Include="Controllers\productsController.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Controllers\purchaseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,6 +186,7 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\PurchaseDetail.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
