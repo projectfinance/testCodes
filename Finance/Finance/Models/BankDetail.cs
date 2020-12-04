@@ -11,7 +11,9 @@ namespace Finance.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract]
     public partial class BankDetail
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,9 +21,12 @@ namespace Finance.Models
         {
             this.Users = new HashSet<User>();
         }
-    
+        
+        [DataMember]
         public string AccountNumber { get; set; }
+        [DataMember]
         public string BankName { get; set; }
+        [DataMember]
         public string BankIFSC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

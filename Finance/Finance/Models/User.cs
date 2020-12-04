@@ -11,7 +11,9 @@ namespace Finance.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract]
     public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,15 +22,24 @@ namespace Finance.Models
             this.CardDetails = new HashSet<CardDetail>();
             this.PurchaseDetails = new HashSet<PurchaseDetail>();
         }
-    
+        
+        [DataMember]
         public int CustomerID { get; set; }
+        [DataMember]
         public string Username { get; set; }
+        [DataMember]
         public string Password { get; set; }
+        [DataMember]
         public string AccountNumber { get; set; }
+        [DataMember]
         public string Firstname { get; set; }
+        [DataMember]
         public string LastName { get; set; }
+        [DataMember]
         public string Phoneno { get; set; }
+        [DataMember]
         public string EmailID { get; set; }
+        [DataMember]
         public string Address { get; set; }
     
         public virtual BankDetail BankDetail { get; set; }

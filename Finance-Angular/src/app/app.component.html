@@ -6,11 +6,14 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="Home">Home</a>
           </li>
-          <li class="nav-item" *ngIf="login">
+          <li class="nav-item">
             <a class="nav-link" routerLink="Dashboard">Dashboard</a>
           </li>
           <li class="nav-item" *ngIf="login">
             <a class="nav-link" routerLink="Products">Products</a>
+          </li>
+          <li class="nav-item" *ngIf="!login">
+            <a class="nav-link" routerLink="Admin">Admin</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto mr-3">
