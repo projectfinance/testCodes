@@ -11,11 +11,16 @@ namespace Finance.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract]
     public partial class Admin
     {
+        [DataMember]
         public int AdminId { get; set; }
+        [DataMember]
         public string Username { get; set; }
+        [DataMember]
         public string Password { get; set; }
     }
 }

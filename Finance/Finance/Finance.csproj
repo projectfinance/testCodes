@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\forgotpasswordController.cs" />
     <Compile Include="Controllers\productsController.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -1,0 +1,55 @@
+<div class="card ml-auto mr-auto shadow mt-5" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src={{pic}} class="card-img" alt="Logo">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{card[0]["Firstname"]}} {{card[0].LastName}}</h5>
+          <p class="card-text">Card Number : {{card[0].CardID}} <br>Validity : {{card[0].Validity}} <br>Card Type : {{card[0].CardType}} <br>Total Credit : {{card[0].RemainingCredit}}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="activate" class="card-footer text-white bg-success text-center font-weight-normal">Activated</div>
+    <div *ngIf="!activate" class="card-footer text-white bg-danger text-center font-weight-normal">Deactivated</div>
+  </div>
+  
+  <br><br>
+  
+  <div class="container-fluid">
+      <div class="text-center">
+          <button class="btn btn-outline-dark" (click)="GetPurchase()">Purchase Details</button>
+      </div>
+      <hr>
+      <div class="table-responsive">
+          <table class="table table-bordered">
+              <thead class="thead-dark">
+                  <tr>
+                      <th>Purchase ID</th>
+                      <th>Product ID</th>
+                      <th>Card ID</th>
+                      <th>Purchase Date</th>
+                      <th>Customer ID</th>
+                      <th>EMI Scheme</th>
+                      <th>EMI Paid</th>
+                      <th>EMI Left</th>
+                      <th>EMI Per Month</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let p of purchase">
+                      <td>{{p["purch_ob"].PurchaseID}}</td>
+                      <td>{{p["purch_ob"].ProductID}}</td>
+                      <td>{{p["purch_ob"].CardID}}</td>
+                      <td>{{p["purch_ob"].PurchaseDate}}</td>
+                      <td>{{p["purch_ob"].CustomerID}}</td>
+                      <td>{{p["purch_ob"].EmiScheme}}</td>
+                      <td>{{p["purch_ob"].EmiPaid}}</td>
+                      <td>{{p["purch_ob"].EmiLeft}}</td>
+                      <td>{{p["purch_ob"].EmiPerMonth}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+

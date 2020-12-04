@@ -1,0 +1,50 @@
+<p>admin works!</p>
+<div class="table w-4">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Customer ID</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Email ID</th>
+                <th>Address</th>
+                <th>Account Number</th>
+                <th>Bank Name</th>
+                <th>Bank IFSC</th>
+                <th>Activation</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let a of admindata">
+            <tr>
+                <td>{{a.CustomerID}}</td>
+                <td>{{a.Username}}</td>
+                <td>{{a.Password}}</td>
+                <td>{{a.Firstname}}</td>
+                <td>{{a.LastName}}</td>
+                <td>{{a.Phoneno}}</td>
+                <td>{{a.EmailID}}</td>
+                <td>{{a.Address}}</td>
+                <td>{{a.AccountNumber}}</td>
+                <td>{{a.BankName}}</td>
+                <td>{{a.BankIFSC}}</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="ActivateID(a.CustomerID)">Activate</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="text-center"><br>
+                Do you want to Activate User ?<br><br>
+                <button class="btn btn-success" data-dismiss="modal" (click)="ActivateYes()">Yes</button>&nbsp;<button class="btn btn-success" data-dismiss="modal" (click)="ActivateNo()">No</button><br><br>      
+            </div>
+        </div>
+    </div>
+</div>
